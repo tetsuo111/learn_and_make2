@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content = "text/html; charset = utf-8">
+  <title>アンケート</title>
+</head>
+<body>
+アンケートにお答えください
+<br>
+<form action = "check_question.php" method = "POST">
+この本の購入日を教えてください<br>
+<input type = "text" name = "pdate" value = "2010/08/01">
+<br><br>
+1ヶ月あたりの書籍の平均購入額を教えてください。<br>
+<input type = "text" name = "pprice" value  = "5000">円
+<br><br>
+本書の評価を教えてください。<br>
+<input type = "radio" name = "star" value = "5">5:とてもいい
+<input type = "radio" name = "star" value = "4">4:いい
+<input type = "radio" name = "star" value = "3">3:ふつう
+<input type = "radio" name = "star" value = "2">2:わるい
+<input type = "radio" name = "star" value = "1">1:さいあく
+<br><br>
+
+<!--複数のパラメータ名を指定する場合、配列を使用する -->
+興味のある言語を教えてください。(複数選択可)<br>
+<input type = "checkbox" name = "lang[0]" value = "PHP">PHP
+<input type = "checkbox" name = "lang[1]" value = "Perl">Perl
+<input type = "checkbox" name = "lang[2]" value = "Java">Java
+<input type = "checkbox" name = "lang[3]" value = "C#">C#
+<input type = "checkbox" name = "lang[4]" value = "C++">C++
+<input type = "checkbox" name = "lang[5]" value = "Basic">Basic
+<br><br>
+あなたの職種を教えてください<br>
+<select name = "job">
+<option value = "プログラマー">プログラマー
+<option value = "コンサルタント">コンサルタント
+<option value = "研究職">研究職
+<option value = "学生">学生
+<option value = "その他">その他
+</select>
+<br><br>
+<input type = "submit" value = "アンケートを確認する">
+</form>  
+</body>
+</html>
