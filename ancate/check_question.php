@@ -15,7 +15,7 @@ $star = htmlspecialchars($_POST['star'] , ENT_QUOTES);
 //興味のある言五　offset対策として配列を二個用意して配列二つに値が入っている時に
 //表示するようにしている
 $ver = array();
-for($i = 0; $i < 6; $i++){
+for($i = 0; $i < 7; $i++){
   if(isset($_POST['lang'][$i]) ){
     $lang[$i] = htmlspecialchars($_POST['lang'][$i] , ENT_QUOTES);
     $ver[$i] = $lang[$i];
@@ -66,7 +66,7 @@ $job = htmlspecialchars($_POST['job'] , ENT_QUOTES);
 <br><br>
 興味のある言語を教えてください。(複数選択可)<br>
 <?php
-  for($i = 0; $i < 6; $i++){
+  for($i = 0; $i < 7; $i++){
     //チェックされているもののみ表示
     if(isset($lang[$i])  ) echo '['.$lang[$i].']';
   }
@@ -82,7 +82,7 @@ $job = htmlspecialchars($_POST['job'] , ENT_QUOTES);
 <input type = "hidden" name = "pprice" value = "<?php echo $pprice; ?>">
 <input type = "hidden" name = "star" value = "<?php echo $star; ?>">
 <?php 
-  for($i = 0; $i < 6; $i++){
+  for($i = 0; $i < 7; $i++){
     if(isset($lang[$i])) 
     echo '<input type = "hidden" name = "lang['.$i.']" value = "'.$lang[$i].'">';
   }

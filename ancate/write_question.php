@@ -13,14 +13,14 @@ $pprice = htmlspecialchars($_POST['pprice'], ENT_QUOTES);
 $star = htmlspecialchars($_POST['star'], ENT_QUOTES);
 $ver  = array();
 //興味のある言語　一　1,0に変換
-for ($i = 0; $i < 6; $i++) {
+for ($i = 0; $i < 7; $i++) {
     /*
     古い方　
 		$lang[$i] = isset($_POST['lang'][$i]) ? htmlspecialchars($_POST['lang'][$i], ENT_QUOTES):null;
     $ver = $lang[$i];
     */    
       //$lang[$i] = $_POST['lang'][$i]　=== '' ? 0 : 1;
-    $lang[$i] = isset($_POST['lang'][$i]) ? 0:1;
+    $lang[$i] = isset($_POST['lang'][$i]) ? 0 : 1;
 }
 
 
@@ -92,12 +92,12 @@ $query = mysqli_query($conn , $sql);
 }
 
 
-
-
 ?>
 <body>
 アンケートを登録しました
-
+<br>
+<br>
+  <a href="query_question.php">アンケート結果</a>
 
 </body>
 </html>

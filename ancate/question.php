@@ -9,7 +9,7 @@
 <br>
 <form action = "check_question.php" method = "POST">
 この本の購入日を教えてください<br>
-<input type = "text" name = "pdate" value = "2010/08/01">
+<input type = "text" name = "pdate" value ="<?php echo date('Y/m/d');  ?>"  >
 <br><br>
 1ヶ月あたりの書籍の平均購入額を教えてください。<br>
 <input type = "text" name = "pprice" value  = "5000">円
